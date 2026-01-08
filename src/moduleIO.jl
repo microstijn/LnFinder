@@ -23,8 +23,7 @@ function classify_hits_from_fasta(fasta_path::AbstractString)
         seq_id = FASTA.identifier(record)
         seq_data = FASTA.sequence(String, record) # Get sequence as String
         
-        # Run our classifier (The "Funnel" Step 2)
-        # Note: We convert to LongAA inside the classifier wrapper we wrote earlier
+        # Run classifier 
         motif = classify_pqq_adh(seq_data)
 
         # Store results

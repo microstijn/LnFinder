@@ -6,7 +6,7 @@ using BioSequences
     Unknown
 end
 
-# We use PROSITE notation as recommended in the docs.
+# Use PROSITE notation as recommended in BioSequences docs.
 # D-x-D corresponds to Asp-Any-Asp
 const LN_PATTERN = prosite"D-x-D"
 # D-x-[ATS] corresponds to Asp-Any-{Ala,Thr,Ser}
@@ -36,6 +36,6 @@ Wrapper for strings. Converts to LongAA for efficient biological searching.
 """
 function classify_pqq_adh(seq::AbstractString)
     # Convert to LongAA (LongSequence{AminoAcidAlphabet}) as defined in docs
-    # Note: This assumes the string contains valid amino acid characters.
+    # Note: No validation for type (yet)
     return classify_pqq_adh(LongAA(seq))
 end
