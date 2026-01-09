@@ -13,6 +13,7 @@ include("ModuleIO.jl")
 # Export public interface methods
 #export run_hmmer, parse_hmmer_tblout
 export classify_pqq_adh, MotifType
-export classify_hits_from_fasta
+export analyze_alignment
+#export classify_hits_from_fasta
 
 end # module LnFinder

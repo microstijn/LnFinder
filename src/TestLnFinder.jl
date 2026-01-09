@@ -1,3 +1,6 @@
+using Pkg
+Pkg.activate(joinpath(@__DIR__, ".."))
+
 using Revise
 using LnFinder
 using Test
@@ -20,41 +23,38 @@ using BioSequences
         @test classify_pqq_adh(str_seq) == LnFinder.Lanthanide
     end
 
-    @testset "FASTA Workflow (HMMER Web Integration)" begin
-        # Create a dummy FASTA file representing HMMER output
-        # Seq1: Ln-dependent (D-x-D)
-        # Seq2: Ca-dependent (D-x-A)
-        # Seq3: Garbage/Unknown
-        dummy_fasta = """
-        >seq_Ln
-        MKTADLDG
-        >seq_Ca
-        MKTADLAG
-        >seq_Unknown
-        AAAAAA
+
+    @testset "Alignment Analysis" begin
+        # Create a dummy "Aligned FASTA"
+        # Notice the gaps (-) and that the motif aligns at column 6 (1-based)
+        # Seq1: Ln (D-L-D) at col 6
+        # Seq2: Ca (D-L-A) at col 6
+        # Seq3: Noise (Has a "D-L-D" at col 1, but it doesn't align with the others!)
+        aligned_fasta = """
+        >Ln_Seq
+        -----DLD-------
+        >Ca_Seq
+        -----DLA-------
+        >Noise_Seq
+        DLD--X-X-------
         """
         
-        # Write to a generic temp file
-        temp_file = "test_hits.fasta"
-        open(temp_file, "w") do io
-            write(io, dummy_fasta)
-        end
+        temp_file = "test_aligned.fasta"
+        open(temp_file, "w") do io; write(io, aligned_fasta); end
 
-        # Run function
-        df = classify_hits_from_fasta(temp_file)
-
-        # Validate 
-        @test size(df, 1) == 3
+        # Run analysis
+        df, col_idx = analyze_alignment(temp_file,sample_size=500)
         
-        # Check IDs
-        @test df.id[1] == "seq_Ln"
+        # Check if it found the correct column (Column 6 is the 'D')
+        @test col_idx == 6
         
         # Check Classifications
-        @test df.motif[1] == LnFinder.Lanthanide    # Seq1 matches Ln
-        @test df.motif[2] == LnFinder.Calcium       # Seq2 matches Ca
-        @test df.motif[3] == LnFinder.Unknown       # Seq3 matches nothing
+        # The Noise_Seq has "DLD" at col 1, but the CONSENSUS is at col 6.
+        # At col 6, Noise_Seq has 'X', so it should be Unknown.
+        @test df.motif[1] == LnFinder.Lanthanide
+        @test df.motif[2] == LnFinder.Calcium
+        @test df.motif[3] == LnFinder.Unknown # Correctly rejected the false positive!
 
-        # Cleanup
         rm(temp_file)
     end
 end

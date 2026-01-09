@@ -14,9 +14,12 @@ using LnFinder
 prelim scripting
 =# 
 
-f = raw"C:\Users\peete074\OneDrive - Wageningen University & Research\programming\LnFinder\dat\bc0f8812-ae10-4feb-ae88-69b3e5628280-5f14c9c6783ff9c0.fa"
+f = raw"C:\Users\peete074\OneDrive - Wageningen University & Research\programming\LnFinder\dat\hmmResults\6768f934-391a-4ffa-a8f2-f34d41af7082-5f14c9c6783ff9c0.afa"
 
-df = classify_hits_from_fasta(f)
+df, col_idx = analyze_alignment(f, sample_size=500)
 
-# 3. Filter for Lanthanide users (The "Where To Find Them" part)
+# Filter for Lanthanide
 ln_users = filter(row -> row.motif == LnFinder.Lanthanide, df)
+
+
+
