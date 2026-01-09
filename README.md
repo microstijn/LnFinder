@@ -13,8 +13,8 @@ LnFinder automates the detection of these motifs in aligned sequences in the out
 
 ## Features
 
-**Motif classification**: Distinguish between Lanthanide, Calcium, and Unknown motifs using PROSITE notation.
+* **Motif classification**: Distinguish between Lanthanide, Calcium, and Unknown motifs using PROSITE notation.
 
-**Streaming analysis**: Optimized analyze_alignment function handles massive FASTA files by streaming data rather than loading it entirely into RAM.
+* **Streaming analysis**: Optimized analyze_alignment function handles massive FASTA files by streaming data rather than loading it entirely into RAM.
 
-**Heuristic active site detection**: Automatically identifies the consensus active-site column by using aligned sequences, sampling the initial subset of the alignment.
+* **Heuristic active site detection**: Automatically identifies the consensus active-site column by using aligned sequences, sampling the initial subset of the alignment.
