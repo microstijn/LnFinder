@@ -1,5 +1,34 @@
 # LnFinder
 
+
+```mermaid
+graph TD
+    %% Initial Discovery
+    DB[(Proteome Database)] --> HMM[HMMER: Discovery Phase]
+    HMM -- Candidate Selection --> Hits[Potential Hits]
+
+    %% Mapping Phase
+    subgraph Mapping_Phase [Structural Mapping]
+    Hits --> Project[hmmsearch/hmmalign: Map to Profile]
+    Project --> Coords[Coordinate Extraction]
+    Coords --> Verify{Match State Verification}
+    end
+
+    %% Functional Validation
+    Verify -- "D-x-D at Match States" --> Validated[Validated REE-Binding Proteins]
+    Verify -- "Non-Conserved / Gap" --> Trash[Discarded False Positives]
+
+    %% Metadata Integration
+    subgraph Enrichment [Metagenomic Enrichment]
+    Validated --> Taxonomy[NCBI Taxonomy Mapping]
+    Validated --> Omni[OmniMicrobe: OBT Ontology Mapping]
+    end
+
+    %% Synthesis
+    Taxonomy --> Final[Final Dataset: 24,959 Verified Hits]
+    Omni --> Final
+```
+
 LnFinder.jl is a Julia package designed to identify and classify Lanthanide-dependent enzymes from large-scale metagenomic datasets.
 
 It uses the biochemical "Lanthanide switch" as described by Voutsinos et al. (2025), allowing for the screening of PQQ-dependent dehydrogenases in any ecosystem to determine if they encode for Lanthanide (Ln) or Calcium (Ca) as a cofactor.
