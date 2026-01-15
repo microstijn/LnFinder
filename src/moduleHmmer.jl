@@ -1,57 +1,152 @@
+module ModuleHmmer
+
+using BioSequences
+using FASTX
 using DataFrames
-using CSV
+
+export parse_hmmalign_results, calibrate_active_site, identify_model_coordinate
 
 """
-    run_hmmer(hmm_profile, target_sequences, output_table; cpu=1)
+    identify_model_coordinate(hmm_aligned_seq::String, target_pattern::String)
 
-Runs `hmmsearch` via the command line.
-Arguments are ordered: Input -> Output.
+Helper to find the index of a specific pattern (e.g., "DVD") in a single reference 
+sequence string that has already been mapped to HMM coordinates.
+Useful for debugging specific sequences.
 """
-function run_hmmer(hmm_profile::AbstractString, target_sequences::AbstractString, output_table::AbstractString; cpu::Integer=1)
-    if isnothing(Sys.which("hmmsearch"))
-        error("hmmsearch not found! Please install HMMER.")
-    end
-
-    # Use `cmd` backticks for safe shell execution
-    cmd = `hmmsearch --tblout $output_table --cpu $cpu -E 1e-10 $hmm_profile $target_sequences`
-    run(cmd)
+function identify_model_coordinate(hmm_aligned_seq::String, target_pattern::String)
+    # Strip insertions (lowercase) to match HMM coordinate system
+    clean_seq = filter(c -> isuppercase(c) || c == '-', hmm_aligned_seq)
     
-    return output_table
+    # Find the range of the pattern
+    rng = findfirst(target_pattern, clean_seq)
+    if isnothing(rng)
+        error("Pattern '$target_pattern' not found in the reference sequence.")
+    end
+    # Return the start index (1-based)
+    return rng.start
 end
 
 """
-    parse_hmmer_tblout(file_path)
+    calibrate_active_site(fasta_path::String)
 
-Parses the whitespace-aligned HMMER output into a DataFrame.
+Reads the first two sequences from an aligned FASTA (AFA) to find the model coordinate.
+Assumes:
+  Seq 1 = Lanthanide Reference (e.g. XoxF1) -> Expects D-x-D
+  Seq 2 = Calcium Reference    (e.g. MxaF)  -> Expects D-x-[ATS]
+
+Returns the 1-based Model Coordinate (index ignoring insertions).
 """
-function parse_hmmer_tblout(file_path::AbstractString)
-    # Initialize typed vectors instead of a Vector{Any} to avoid "elaborate container types"
-    targets = String[]
-    queries = String[]
-    evalues = Float64[]
-    scores = Float64[]
+function calibrate_active_site(fasta_path::String)
     
-    for line in eachline(file_path)
-        # Skip comments
-        startswith(line, "#") && continue
-        
-        # Split by whitespace
-        parts = split(line)
-        
-        # Ensure the line has enough parts to avoid bounds errors (basic safety)
-        if length(parts) >= 6
-            push!(targets, String(parts[1]))
-            push!(queries, String(parts[3]))
-            push!(evalues, parse(Float64, parts[5]))
-            push!(scores, parse(Float64, parts[6]))
+    # Read the first two sequences
+    seqs = String[]
+    reader = FASTA.Reader(open(fasta_path))
+    
+    for (i, record) in enumerate(reader)
+        push!(seqs, FASTA.sequence(String, record))
+        if i >= 2; break; end
+    end
+    close(reader)
+
+    if length(seqs) < 2
+        error("File contains fewer than 2 sequences. Cannot calibrate.")
+    end
+
+    # 2. Convert to Model Coordinates (Strip lowercase insertions)
+    # This aligns them strictly to the HMM node numbers (1, 2, 3...)
+    ref_ln = filter(c -> isuppercase(c) || c == '-', seqs[1])
+    ref_ca = filter(c -> isuppercase(c) || c == '-', seqs[2])
+
+    # Sanity Check: Model coordinates must be identical length for all sequences
+    if length(ref_ln) != length(ref_ca)
+        error("HMM Alignment error: Model coordinate strings are different lengths!")
+    end
+
+    println("Scanning for Active Site Collision...")
+    println("Ref 1 (Ln): Looking for D-x-D")
+    println("Ref 2 (Ca): Looking for D-x-[ATS]")
+    println("-"^40)
+
+    # 3. Scan for the unique overlap
+    # Iterate through the MODEL string
+    for i in 1:(length(ref_ln) - 2)
+        # Check Reference 1 for Lanthanide Pattern (D-x-D)
+        r1_anchor = ref_ln[i]
+        r1_switch = ref_ln[i+2]
+        is_ln   = (r1_anchor == 'D' && r1_switch == 'D')
+
+        # Check Reference 2 for Calcium Pattern (D-x-A/T/S)
+        r2_anchor = ref_ca[i]
+        r2_switch = ref_ca[i+2]
+        is_ca   = (r2_anchor == 'D' && (r2_switch in ['A', 'T', 'S']))
+
+        # Check for COLLISION (The confirmation)
+        if is_ln && is_ca
+            println(">>> MATCH FOUND AT MODEL INDEX: $i")
+            println("    Ref 1: $r1_anchor-$(ref_ln[i+1])-$r1_switch")
+            println("    Ref 2: $r2_anchor-$(ref_ca[i+1])-$r2_switch")
+            return i
         end
     end
-    
-    # Return a clean DataFrame
-    return DataFrame(
-        target = targets, 
-        query = queries, 
-        evalue = evalues, 
-        score = scores
-    )
+
+    error("Could not find a column where Ref 1 is D-x-D and Ref 2 is D-x-[ATS]. Check your references.")
 end
+
+"""
+    parse_hmmalign_results(fasta_path::AbstractString, active_site_idx::Int)
+
+Parses the output of `hmmalign --trim --outformat afa`.
+Captures the EXACT 3-residue motif for visualization.
+"""
+function parse_hmmalign_results(fasta_path::AbstractString, active_site_idx::Int)
+    
+    ids = String[]
+    motifs = Symbol[] 
+    residues = String[] 
+
+    FASTA.Reader(open(fasta_path)) do reader
+        for record in reader
+            raw_seq = FASTA.sequence(String, record)
+            
+            # Enforce HMM Coordinate System (Upper = Match, - = Deletion)
+            model_seq = filter(c -> isuppercase(c) || c == '-', raw_seq)
+            
+            if active_site_idx + 2 > length(model_seq)
+                push!(ids, FASTA.identifier(record))
+                push!(motifs, :Truncated)
+                push!(residues, "---")
+                continue
+            end
+
+            # EXTRACT THE REAL TRIPLET
+            # We take the 3-residue window starting at the anchor index
+            actual_motif = model_seq[active_site_idx : active_site_idx + 2]
+            
+            anchor = actual_motif[1]
+            switch = actual_motif[3]
+            
+            # Classify
+            if anchor == '-' || switch == '-' || actual_motif[2] == '-'
+                motif_type = :Gap
+            elseif anchor == 'D'
+                if switch == 'D'
+                    motif_type = :Lanthanide
+                elseif switch in ['A', 'T', 'S']
+                    motif_type = :Calcium
+                else
+                    motif_type = :Unknown
+                end
+            else
+                motif_type = :Unknown
+            end
+
+            push!(ids, FASTA.identifier(record))
+            push!(motifs, motif_type)
+            push!(residues, String(actual_motif)) 
+        end
+    end
+
+    return DataFrame(id=ids, classification=motifs, active_site=residues)
+end
+
+end # module

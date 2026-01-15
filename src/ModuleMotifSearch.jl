@@ -1,4 +1,9 @@
+module ModuleMotifSearch
+
 using BioSequences
+
+export MotifType, classify_pqq_adh
+export Lanthanide, Calcium, Unknown
 
 @enum MotifType begin
     Lanthanide
@@ -35,7 +40,8 @@ end
 Wrapper for strings. Converts to LongAA for efficient biological searching.
 """
 function classify_pqq_adh(seq::AbstractString)
-    # Convert to LongAA (LongSequence{AminoAcidAlphabet}) as defined in docs
-    # Note: No validation for type (yet)
+    # Convert to LongAA (LongSequence{AminoAcidAlphabet})
     return classify_pqq_adh(LongAA(seq))
 end
+
+end # module
