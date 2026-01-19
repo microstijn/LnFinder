@@ -99,34 +99,41 @@ Parses the output of `hmmalign --trim --outformat afa`.
 Captures the EXACT 3-residue motif for visualization.
 """
 function parse_hmmalign_results(fasta_path::AbstractString, active_site_idx::Int)
-    
     ids = String[]
+    accessions = String[] # Nieuwe kolom voor de merge-sleutel
     motifs = Symbol[] 
     residues = String[] 
 
     FASTA.Reader(open(fasta_path)) do reader
         for record in reader
-            raw_seq = FASTA.sequence(String, record)
+            raw_header = FASTA.identifier(record)
             
-            # Enforce HMM Coordinate System (Upper = Match, - = Deletion)
+            acc = ""
+            if occursin('|', raw_header)
+                parts = split(raw_header, '|')
+                acc = length(parts) >= 2 ? String(parts[2]) : String(parts[1])
+            else
+                m = match(r"^([A-Z0-9]+)", raw_header)
+                acc = isnothing(m) ? raw_header : String(m.captures[1])
+            end
+            acc = split(acc, ' ')[1] 
+
+            raw_seq = FASTA.sequence(String, record)
             model_seq = filter(c -> isuppercase(c) || c == '-', raw_seq)
             
             if active_site_idx + 2 > length(model_seq)
-                push!(ids, FASTA.identifier(record))
+                push!(ids, raw_header)
+                push!(accessions, acc)
                 push!(motifs, :Truncated)
                 push!(residues, "---")
                 continue
             end
 
-            # EXTRACT THE REAL TRIPLET
-            # We take the 3-residue window starting at the anchor index
             actual_motif = model_seq[active_site_idx : active_site_idx + 2]
+            anchor = actual_motif[1] 
+            switch = actual_motif[3] 
             
-            anchor = actual_motif[1]
-            switch = actual_motif[3]
-            
-            # Classify
-            if anchor == '-' || switch == '-' || actual_motif[2] == '-'
+            if anchor == '-' || switch == '-' || actual_motif[2] == '-' 
                 motif_type = :Gap
             elseif anchor == 'D'
                 if switch == 'D'
@@ -134,19 +141,20 @@ function parse_hmmalign_results(fasta_path::AbstractString, active_site_idx::Int
                 elseif switch in ['A', 'T', 'S']
                     motif_type = :Calcium
                 else
-                    motif_type = :Unknown
+                    motif_type = :Unknown 
                 end
             else
                 motif_type = :Unknown
             end
 
-            push!(ids, FASTA.identifier(record))
+            push!(ids, raw_header)
+            push!(accessions, acc)
             push!(motifs, motif_type)
             push!(residues, String(actual_motif)) 
         end
     end
 
-    return DataFrame(id=ids, classification=motifs, active_site=residues)
+    return DataFrame(original_header=ids, accession=accessions, classification=motifs, active_site=residues)
 end
 
 end # module

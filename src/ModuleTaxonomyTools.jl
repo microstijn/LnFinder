@@ -1,6 +1,6 @@
 module TaxonomyTools
 
-export load_taxonomy_db, get_lineage, append_taxonomy!
+export load_taxonomy_db, get_lineage, append_taxonomy!, merge_taxonomy_with_hits, filter_centroids
 
 using DataFrames
 using ProgressMeter
@@ -123,6 +123,64 @@ function append_taxonomy!(df::DataFrame, db::TaxonomyDB; taxid_col=:TaxID)
         end
     end
     return df
+end
+
+using DataFrames
+
+"""
+    merge_taxonomy_with_hits(hits_df, tax_df; on_col=:TaxID)
+
+Joins the HMM results with the OmniMicrobe/Taxonomy metadata. 
+We use a left join to ensure no protein hits are lost during the merge.
+"""
+function merge_taxonomy_with_hits(hits_df::DataFrame, tax_df::DataFrame; on_col=:TaxID)
+    # 1. Ensure the join column is the same type (Int64)
+    # This prevents 'No matching method' errors during join
+    hits_df[!, on_col] = Int64.(hits_df[!, on_col])
+    tax_df[!, on_col] = Int64.(tax_dSf[!, on_col])
+
+    println("🔗 Merging $(nrow(hits_df)) hits with taxonomic metadata...")
+
+    # 2. Perform Left Join
+    # hits_df is the 'Left' table (the primary data)
+    # tax_df is the 'Right' table (the metadata)
+    merged_df = leftjoin(hits_df, tax_df, on=on_col)
+
+    # 3. Post-merge Cleanup
+    # Sometimes tax_df has redundant columns; we ensure 'habitat_category' exists
+    if !("habitat_category" in names(merged_df))
+        @warn "Metadata columns not found in merged result. Check tax_df headers."
+    end
+
+    total_mapped = count(.!ismissing.(merged_df.habitat_specific))
+    println("✅ Merge complete. $total_mapped / $(nrow(merged_df)) hits now have habitat data.")
+
+    return merged_df
+end
+
+"""
+    filter_centroids(df, uc_path)
+Filters the main DataFrame to keep only the cluster representatives from USEARCH.
+"""
+function filter_centroids(df, uc_path)
+    centroids = String[]
+    for line in readlines(uc_path)
+        parts = split(line, '\t')
+        if parts[1] == "S"  # S indicates a Centroid (Seed)
+            # Column 9 is the sequence label in UC format
+            push!(centroids, parts[9])
+        end
+    end
+    
+    # Filter the original dataframe
+    dedup_df = filter(row -> row.id in centroids, df)
+    
+    println("✂️ Deduplication Summary:")
+    println("  Total sequences: $(nrow(df))")
+    println("  Cluster Centroids: $(nrow(dedup_df))")
+    println("  Reduction: $(round(100 * (1 - nrow(dedup_df)/nrow(df)), digits=1))%")
+    
+    return dedup_df
 end
 
 end # module
