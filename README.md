@@ -233,7 +233,7 @@ The active site residues were identified by anchoring HMM match-states to struct
 - Quercus rubra
 - Podospora australis
 
-** Conclusions: **
+**Conclusions:**
 * Most eukaryote sequences are likely contaminations.
 * Interesting set of Archaea, food for a perspective paper.
 
@@ -251,7 +251,7 @@ The discovered sequences were mapped to broad ecological categories using OntoBi
 | Anthropogenic | 1658 | 2.8% |
 ---
 
-** Conclusion: **
+**Conclusion:**
 * NOT just aquatic, but widespread.
 * Caveat is that this is a SEMANTIC link. NOT based on where the sample was taken.
 * Further analysis of sample origin could strengthen / weaken this result. 
@@ -307,7 +307,7 @@ Een vergelijking van de 43 archeale centroids met de bacteriële meerderheid laa
 
 <img width="8928" height="6397" alt="_ff00ff" src="https://github.com/user-attachments/assets/0ff000b2-c73f-4b38-a81c-40d072aaae44" />
 
-** Conclusion: **
+**Conclusion:**
 * Eukarya not diffuse but focussed. 2 explana possible:
      * There is a eukarya specific Ln dependent gene.
      * The eukaryote cluster is a bacterial lineage living in and on Eukarya, and thus frequently contaminates Eukaryotic genomes.
