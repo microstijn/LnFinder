@@ -298,10 +298,9 @@ Een vergelijking van de 43 archeale centroids met de bacteriële meerderheid laa
 
 ### Methods
 
-* Used usearch 0.9 centroids 
-* Only selected those assigned a taxonomy 
+* Only selected those assigned a taxonomy (~11k sequences). 
 * FAMSA to align
-* FastTree to build tree
+* FastTree to build tree (fasttree -lg -gamma < aligned_known.afa > lanthanide_known.nwk)
 
 ### Results
 
