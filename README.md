@@ -233,9 +233,13 @@ The active site residues were identified by anchoring HMM match-states to struct
 - Quercus rubra
 - Podospora australis
 
+** Conclusions: **
+* Most eukaryote sequences are likely contaminations.
+* Interesting set of Archaea, food for a perspective paper.
+
 ### Semantic link from taxonomy to environment
 
-The discovered sequences were mapped to broad ecological categories using a heuristic aggregation of OntoBiotope (OBT) leaf nodes.
+The discovered sequences were mapped to broad ecological categories using OntoBiotope (OBT) leaf nodes.
 
 | Habitat | Count | Proportion |
 | :--- | :--- | :--- |
@@ -246,6 +250,11 @@ The discovered sequences were mapped to broad ecological categories using a heur
 | Terrestrial | 3344 | 5.7% |
 | Anthropogenic | 1658 | 2.8% |
 ---
+
+** Conclusion: **
+* NOT just aquatic, but widespread.
+* Caveat is that this is a SEMANTIC link. NOT based on where the sample was taken.
+* Further analysis of sample origin could strengthen / weaken this result. 
 
 ## 3. Niche Enrichment Analysis (Z-Scores)
 
@@ -283,7 +292,7 @@ Een vergelijking van de 43 archeale centroids met de bacteriële meerderheid laa
 | **Fenylalanine (F)** | 12.8% | **0.0%** | Negatieve selectie in Archaea |
 | **Histidine (H) Verrijking** | 1.3% | **9.3%** | ? |
 
-**Conclusie:** De Lanthanide-afhankelijkheid in Archaea is geen kopie van het bacteriële systeem, maar een onafhankelijke evolutionaire lijn. Dit maakt Archaea tot een nieuwe doelgroep voor cultivatie-experimenten.
+**Conclusie:** De Lanthanide-afhankelijkheid in Archaea is geen kopie van het bacteriële systeem, maar een onafhankelijke evolutionaire lijn. Dat maakt de cultivatie van de eerdere Halo Archaea nog interessanter. 
 
 ## Phylogeny
 
@@ -298,7 +307,11 @@ Een vergelijking van de 43 archeale centroids met de bacteriële meerderheid laa
 
 <img width="8928" height="6397" alt="_ff00ff" src="https://github.com/user-attachments/assets/0ff000b2-c73f-4b38-a81c-40d072aaae44" />
 
-
+** Conclusion: **
+* Eukarya not diffuse but focussed. 2 explana possible:
+     * There is a eukarya specific Ln dependent gene.
+     * The eukaryote cluster is a bacterial lineage living in and on Eukarya, and thus frequently contaminates Eukaryotic genomes.
+* Archaea form 2 clusters.  
 
 
 
