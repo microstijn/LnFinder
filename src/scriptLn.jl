@@ -328,3 +328,6 @@ serialize(joinpath(paths.out_dir, "statistical_results.jls"),
     Create a FastTree 
 =#
 
+f = readdir(raw"D:\teamsDownoad\Monthly_values")
+
+println(f)
