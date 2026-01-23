@@ -56,7 +56,8 @@ The active site residues were identified by anchoring HMM match-states to struct
 * Uniprot identifyer --> ncbi taxid
     * fallback uniprot --> uniparc --> ncbi taxid 
 * ncbi taxid --> taxonomy trough local taxonomy database. 
-* ncbi taxid --> Omnicrobe semantic database 
+* ncbi taxid --> Omnicrobe semantic database
+* To prevent pollution with identical or very similar sequences, used usearch to cluster to centroids (0.9 threshold). 
 
 ### Results
 
