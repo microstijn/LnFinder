@@ -233,8 +233,14 @@ The active site residues were identified by anchoring HMM match-states to struct
 - Quercus rubra
 - Podospora australis
 
+**Of which unicellular:**
+* Plasmodium yoelii: This is a unicellular protozoan parasite. It is frequently used in laboratory research as a model for malaria (specifically affecting rodents).
+* Symbiodinium pilosum: A species of unicellular algae known as a dinoflagellate. These are famous for their symbiotic relationships with coral reefs.
+* Symbiodinium necroappetens: Another species of unicellular dinoflagellate. Like others in its genus, it provides nutrients to host organisms via photosynthesis.
+  
 **Conclusions:**
-* Most eukaryote sequences are likely contaminations.
+* Most eukaryote sequences are Plants and likely contaminations.
+* Interesting set of Eukarya derived from symbionts: likely pathway to contamination. 
 * Interesting set of Archaea, food for a perspective paper.
 
 ### Semantic link from taxonomy to environment
@@ -309,8 +315,9 @@ Een vergelijking van de 43 archeale centroids met de bacteriële meerderheid laa
 **Conclusion:**
 * Eukarya not diffuse but focussed. 2 explana possible:
      * There is a eukarya specific Ln dependent gene.
-     * The eukaryote cluster is a bacterial lineage living in and on Eukarya, and thus frequently contaminates Eukaryotic genomes.
-* Archaea form 2 clusters.  
+     * The eukaryote cluster is a bacterial lineage living in and on Eukarya, and thus frequently contaminates Eukaryotic genomes. This is corroborated somewhat by the finding that we do see some symbiotic species scattered in the grouping.
+     * To verify this finding we need to study these genes in more detail. 
+* Archaea form 2 clusters.
 
 
 
