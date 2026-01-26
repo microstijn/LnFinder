@@ -234,12 +234,13 @@ The active site residues were identified by anchoring HMM match-states to struct
 - Podospora australis
 
 **Of which unicellular:**
-* Plasmodium yoelii: This is a unicellular protozoan parasite. It is frequently used in laboratory research as a model for malaria (specifically affecting rodents).
-* Symbiodinium pilosum: A species of unicellular algae known as a dinoflagellate. These are famous for their symbiotic relationships with coral reefs.
-* Symbiodinium necroappetens: Another species of unicellular dinoflagellate. Like others in its genus, it provides nutrients to host organisms via photosynthesis.
+* Plasmodium yoelii: This is a unicellular protozoan parasite. It is frequently used in laboratory research as a model for malaria (specifically affecting rodents). Reduced genome: Unlikely to encode for entire PQQ etc. 
+* Symbiodinium pilosum: A species of unicellular algae known as a dinoflagellate, in a symbiotic relationships with coral reefs which can also be populated by methylotrophs etc --> the likely pathway to contamination. 
+* Symbiodinium necroappetens: Another species of unicellular dinoflagellate. An oppertunist, subsisrs on diseased coral reefs.
   
 **Conclusions:**
 * Most eukaryote sequences are Plants and likely contaminations.
+* Unicellular Eukaryotes are are likely also containants. 
 * Interesting set of Eukarya derived from symbionts: likely pathway to contamination. 
 * Interesting set of Archaea, food for a perspective paper.
 
@@ -319,5 +320,9 @@ Een vergelijking van de 43 archeale centroids met de bacteriële meerderheid laa
      * To verify this finding we need to study these genes in more detail. 
 * Archaea form 2 clusters.
 
+## Further steps 
 
+* CAGECAT remote search // cblaster to align the genomic region of hits.
+   * PQQ biosynthesis should be within X basepairs. (is usually in a operon?).
+   * Visualize using Clanker. 
 
