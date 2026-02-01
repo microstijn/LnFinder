@@ -233,8 +233,15 @@ The active site residues were identified by anchoring HMM match-states to struct
 - Quercus rubra
 - Podospora australis
 
+**Of which unicellular:**
+* Plasmodium yoelii: This is a unicellular protozoan parasite. It is frequently used in laboratory research as a model for malaria (specifically affecting rodents). Reduced genome: Unlikely to encode for entire PQQ etc. 
+* Symbiodinium pilosum: A species of unicellular algae known as a dinoflagellate, in a symbiotic relationships with coral reefs which can also be populated by methylotrophs etc --> the likely pathway to contamination. 
+* Symbiodinium necroappetens: Another species of unicellular dinoflagellate. An oppertunist, subsisrs on diseased coral reefs.
+  
 **Conclusions:**
-* Most eukaryote sequences are likely contaminations.
+* Most eukaryote sequences are Plants and likely contaminations.
+* Unicellular Eukaryotes are are likely also containants. 
+* Interesting set of Eukarya derived from symbionts: likely pathway to contamination. 
 * Interesting set of Archaea, food for a perspective paper.
 
 ### Semantic link from taxonomy to environment
@@ -309,8 +316,13 @@ Een vergelijking van de 43 archeale centroids met de bacteriële meerderheid laa
 **Conclusion:**
 * Eukarya not diffuse but focussed. 2 explana possible:
      * There is a eukarya specific Ln dependent gene.
-     * The eukaryote cluster is a bacterial lineage living in and on Eukarya, and thus frequently contaminates Eukaryotic genomes.
-* Archaea form 2 clusters.  
+     * The eukaryote cluster is a bacterial lineage living in and on Eukarya, and thus frequently contaminates Eukaryotic genomes. This is corroborated somewhat by the finding that we do see some symbiotic species scattered in the grouping.
+     * To verify this finding we need to study these genes in more detail. 
+* Archaea form 2 clusters.
 
+## Further steps 
 
+* CAGECAT remote search // cblaster to align the genomic region of hits.
+   * PQQ biosynthesis should be within X basepairs. (is usually in a operon?).
+   * Visualize using Clanker. 
 
