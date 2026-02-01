@@ -1,0 +1,433 @@
+# Archaeal Lanthanide-Dependent Microbes ?
+
+we used LnFinder to search for lanthanide-dependent microbes in archaea. 
+
+The full table of results:  
+
+```latex
+         accession                                               protein_name functional_description             gene_id                                                                           
+                                              organism
+  –––––––––––––––– –––––––––––––––––––––––––––––––––––––––––––––––––––––––––– –––––––––––––––––––––– ––––––––––––––––––– ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+  A0AAV3SL87_HALDO             PQQ-binding-like beta-propeller repeat protein      PQQb-propellerrpt   GCM10008985_31140                                                                           
+                                Halococcus dombrowskii
+  A0A8T4GX75_9EURY      PQQ-dependent dehydrogenase (Methanol/ethanol family)      PQQb-propellerrpt        J2753_000717                                                                           
+                                Halolamina salifodinae
+  A0A6B9FGC7_9EURY                                              Dehydrogenase      PQQb-propellerrpt         EI982_15415                                                                           
+                                     Haloplanus rallus
+  A0A1H3Y393_9EURY       PQQ-dependent dehydrogenase, methanol/ethanol family      PQQb-propellerrpt   SAMN04488065_1596                                                                           
+                                     Haloplanus vescus
+  A0A151AG42_9EURY                Outer membrane protein assembly factor BamB      PQQb-propellerrpt              bamB_3                                                                           
+                       Halalkalicoccus paucihalophilus
+  A0A345DYI9_9EURY                                              Dehydrogenase      PQQb-propellerrpt         DU500_00400                                                                           
+                                 Haloplanus rubicundus
+  A0A345EH10_9EURY                                              Dehydrogenase      PQQb-propellerrpt         DU484_17360                                                                           
+                                 Haloplanus rubicundus
+  A0A419WHC8_9EURY      PQQ-dependent dehydrogenase (Methanol/ethanol family)      PQQb-propellerrpt          ATJ93_1680                                                                           
+                                  Halopiger aswanensis
+  A0A3M0CUB0_9EURY                                              Dehydrogenase      PQQb-propellerrpt          ATH50_3150                                                                           
+                                  Haloplanus aerogenes
+  A0A8J8Q7K0_9EURY                                              Dehydrogenase      PQQb-propellerrpt         CV102_00725                                                                           
+                                Natronococcus pandeyae
+  A0A1I0NPW1_9EURY       PQQ-dependent dehydrogenase, methanol/ethanol family      PQQb-propellerrpt   SAMN05216285_1977                                                                           
+                                 Natrinema salifodinae
+  A0A9Q4L0R1_9EURY             PQQ-binding-like beta-propeller repeat protein      PQQb-propellerrpt         NDI89_06195                                                                           
+                              Natrinema salsiterrestre
+      F8D7P0_HALXS                           Alcohol dehydrogenase (Acceptor)      PQQb-propellerrpt                 N/A                                                                      Halopiger xanaduensis (strain DSM 18323 / JCM 14033 / SH-6)
+      M0AP33_NATA1                                      Alcohol dehydrogenase      PQQb-propellerrpt          C481_13789                              Natrialba asiatica (strain ATCC 700177 / DSM 12278 / JCM 9576 / FERM P-10747 / NBRC 102637 / 172P1)
+  A0A1I0QSI6_9EURY       PQQ-dependent dehydrogenase, methanol/ethanol family      PQQb-propellerrpt   SAMN05216285_3865                                                                           
+                                 Natrinema salifodinae
+      L9Y9N1_9EURY                                      Alcohol dehydrogenase      PQQb-propellerrpt          C489_02431                                                                           
+                        Natrinema versiforme JCM 10478
+      L9X3L8_9EURY                          PQQ-dependent enzyme-like protein      PQQb-propellerrpt          C491_15712                                                                           
+                  Natronococcus amylolyticus DSM 10524
+      L0JN62_NATP1                                      Glucose dehydrogenase      PQQb-propellerrpt          C488_08647                                              Natrinema pellirubrum (strain DSM 15624 / CIP 106293 / JCM 10476 / NCIMB 786 / 157)
+      M0A3L9_9EURY                          PQQ-dependent enzyme-like protein      PQQb-propellerrpt          C484_09159                                                                           
+                       Natrialba taiwanensis DSM 12281
+  A0A8T8E3S0_9EURY             PQQ-binding-like beta-propeller repeat protein      PQQb-propellerrpt         JMJ58_05725                                                                           
+                             Haloterrigena salifodinae
+  A0A7D6CN67_9EURY             PQQ-binding-like beta-propeller repeat protein      PQQb-propellerrpt         HYG81_16475                                                                           
+                                      Natrinema zhouii
+  A0AAF0T724_9EURY             PQQ-binding-like beta-propeller repeat protein      PQQb-propellerrpt         NP511_05380                                                                           
+                              Natrinema thermotolerans
+      M0BEB7_9EURY                                      Alcohol dehydrogenase      PQQb-propellerrpt          C480_03959                                                                           
+                          Natrialba aegyptia DSM 13077
+  A0A1H8TIB8_9EURY       PQQ-dependent dehydrogenase, methanol/ethanol family      PQQb-propellerrpt  SAMN04487948_10790                                                                           
+                               Halogranum amylolyticum
+  A0A4P8WJR9_9EURY                                              Dehydrogenase      PQQb-propellerrpt         FEJ81_13575                                                                           
+                                  Natrinema versiforme
+      L0JXR7_9EURY                                      Glucose dehydrogenase      PQQb-propellerrpt          Natoc_1762                                                                           
+                            Natronococcus occultus SP4
+  A0A8J8KEP7_9EURY             PQQ-binding-like beta-propeller repeat protein      PQQb-propellerrpt         HT576_07200                                                                           
+                          Haloterrigena gelatinilytica
+      L9X994_9EURY                          PQQ-dependent enzyme-like protein      PQQb-propellerrpt          C492_13743                                                                           
+                      Natronococcus jeotgali DSM 18795
+      D2RWI1_HALTV                          PQQ-dependent enzyme-like protein      PQQb-propellerrpt                 N/A                               Haloterrigena turkmenica (strain ATCC 51198 / DSM 5511 / JCM 9101 / NCIMB 13204 / VKM B-1734 / 4k)
+      M0C030_9EURY                          PQQ-dependent enzyme-like protein      PQQb-propellerrpt          C477_18975                                                                           
+                        Haloterrigena salina JCM 13891
+  A0A1N7D934_9EURY       PQQ-dependent dehydrogenase, methanol/ethanol family      PQQb-propellerrpt  SAMN05421752_10282                                                                           
+                             Natronorubrum thiooxidans
+      M0NQ12_9EURY                          PQQ-dependent enzyme-like protein      PQQb-propellerrpt          C469_09521                                                                           
+                      Halorubrum lipolyticum DSM 21995
+  A0A8U0I055_9EURY             PQQ-binding-like beta-propeller repeat protein      PQQb-propellerrpt         M0R89_09060                                                                           
+                                       Halorussus limi
+  A0A151AEV7_9EURY                Outer membrane protein assembly factor BamB      PQQb-propellerrpt              bamB_2                                                                           
+                       Halalkalicoccus paucihalophilus
+  A0A8U0IDH4_9EURY             PQQ-binding-like beta-propeller repeat protein      PQQb-propellerrpt         M0R88_09460                                                                           
+                            Halorussus gelatinilyticus
+      D8J9D2_HALJB                          PQQ-dependent enzyme-like protein      PQQb-propellerrpt          C497_03132                                             Halalkalicoccus jeotgali (strain DSM 18796 / CECT 7217 / JCM 14584 / KCTC 4019 / B3)
+  A0AAV3SK76_HALDO             PQQ-binding-like beta-propeller repeat protein      PQQb-propellerrpt   GCM10008985_31200                                                                           
+                                Halococcus dombrowskii
+  A0A8T4H057_9EURY      PQQ-dependent dehydrogenase (Methanol/ethanol family)      PQQb-propellerrpt        J2753_001662                                                                           
+                                Halolamina salifodinae
+  A0A8U0HX89_9EURY             PQQ-binding-like beta-propeller repeat protein      PQQb-propellerrpt         M0R89_05585                                                                           
+                                       Halorussus limi
+      L9ZXD8_9EURY                          PQQ-dependent enzyme-like protein      PQQb-propellerrpt          C484_12116                                                                           
+                       Natrialba taiwanensis DSM 12281
+      M0AYN8_9EURY                          PQQ-dependent enzyme-like protein      PQQb-propellerrpt          C480_15650                                                                           
+                          Natrialba aegyptia DSM 13077
+  A0A7D5KHY7_9EURY             PQQ-binding-like beta-propeller repeat protein      PQQb-propellerrpt         HYG82_03535                                                                           
+                                  Natrinema halophilum
+  A0A2A5QTY5_9EURY                                              Dehydrogenase      PQQb-propellerrpt         CP557_06545                                                                           
+                                  Natrinema ejinorense
+  A0A4P8WGZ8_9EURY                                              Dehydrogenase      PQQb-propellerrpt         FEJ81_07890                                                                           
+                                  Natrinema versiforme
+      M0AUK6_NATA1                          PQQ-dependent enzyme-like protein      PQQb-propellerrpt          C481_09038                              Natrialba asiatica (strain ATCC 700177 / DSM 12278 / JCM 9576 / FERM P-10747 / NBRC 102637 / 172P1)
+      M0AMH9_9EURY                          PQQ-dependent enzyme-like protein      PQQb-propellerrpt          C482_11650                                                                           
+                    Natrialba chahannaoensis JCM 10990
+      D3SZJ3_NATMM                                         PQQ repeat protein      PQQb-propellerrpt          C500_16250 Natrialba magadii (strain ATCC 43099 / DSM 3394 / CCM 3739 / CIP 104546 / IAM 13178 / JCM 8861 / NBRC 102185 / NCIMB 2190 / MS3)
+  A0A8T4H3P0_9EURY      PQQ-dependent dehydrogenase (Methanol/ethanol family)              PGF_CTERM        J2753_002757                                                                           
+                                Halolamina salifodinae
+  A0A8T4GUC7_9EURY                       Alcohol dehydrogenase (Cytochrome c)      PQQb-propellerrpt        J2753_000980                                                                           
+                                Halolamina salifodinae
+  A0A7D6GRG7_9EURY             PQQ-binding-like beta-propeller repeat protein      PQQb-propellerrpt         HYG81_02700                                                                           
+                                      Natrinema zhouii
+      L0JLH8_NATP1                                      Glucose dehydrogenase      PQQb-propellerrpt          C488_00307                                              Natrinema pellirubrum (strain DSM 15624 / CIP 106293 / JCM 10476 / NCIMB 786 / 157)
+  A0AAF0T0V7_9EURY             PQQ-binding-like beta-propeller repeat protein      PQQb-propellerrpt         NP511_18125                                                                           
+                              Natrinema thermotolerans
+  A0A8U0HRX7_9EURY             PQQ-binding-like beta-propeller repeat protein             Cupredoxin         M0R89_13900                                                                           
+                                       Halorussus limi
+  A0A8U0IFC1_9EURY             PQQ-binding-like beta-propeller repeat protein             Cupredoxin         M0R88_14270                                                                           
+                            Halorussus gelatinilyticus
+  A0A8T4GZ72_9EURY                                      Glucose dehydrogenase      PQQb-propellerrpt        J2753_001169                                                                           
+                                Halolamina salifodinae
+  A0A2A5QQF9_9EURY Pyrrolo-quinoline quinone repeat domain-containing protein      PQQb-propellerrpt         CP557_21355                                                                           
+                                  Natrinema ejinorense
+  A0A8T4GY87_9EURY                       Alcohol dehydrogenase (Cytochrome c)      PQQb-propellerrpt        J2753_000788                                                                           
+                                Halolamina salifodinae
+  A0A1G8YT90_9EURY                                      Glucose dehydrogenase             Cupredoxin SAMN04488571_103194                                                                           
+                           Methanoculleus thermophilus
+  A0A8T7H6S7_9EURY             PQQ-binding-like beta-propeller repeat protein      PQQb-propellerrpt         HQQ74_06125                                                                           
+                             Methanoculleus bourgensis
+      I7L104_METBM                         Quinoprotein ethanol dehydrogenase             Cupredoxin                exaA                                                          Methanoculleus bourgensis (strain ATCC 43281 / DSM 3045 / OCM 15 / MS2)
+      G7WQ48_METH6                                       Cytochrome c class I              DOH_DOMON                 N/A                                                                           
+                Methanothrix harundinacea (strain 6Ac)
+      E6N4I3_CALS0                         Quinoprotein alcohol dehydrogenase      PQQb-propellerrpt          CSUB_C0200                                                                           
+                            Caldiarchaeum subterraneum
+  A0A498GY89_9EURY                                    Uncharacterized protein             Cupredoxin         ABH15_13065                                                                           
+                            Methanoculleus taiwanensis
+  A0A8T7HCR3_9EURY             PQQ-binding-like beta-propeller repeat protein      PQQb-propellerrpt         HQQ74_10705                                                                           
+                             Methanoculleus bourgensis
+  A0A075HY68_9ARCH                                PQQ-dependent dehydrogenase      PQQb-propellerrpt                 N/A                                                                           
+             uncultured marine thaumarchaeote KM390H07
+      E6N4G7_CALS0                         Quinoprotein alcohol dehydrogenase      PQQb-propellerrpt          CSUB_C0216                                                                           
+                            Caldiarchaeum subterraneum
+  A0A2V2N6L9_9EURY Pyrrolo-quinoline quinone repeat domain-containing protein      PQQb-propellerrpt         DK846_03695                                                                           
+                              Methanospirillum lacunae
+  A0A075HW84_9ARCH                                  Pyrrolo-quinoline quinone      PQQb-propellerrpt                 N/A                                                                           
+             uncultured marine thaumarchaeote KM390H07
+  A0A557SUE5_9ARCH     WD40/PQQ-like beta propeller repeat containing protein      PQQb-propellerrpt          NARC_90133                                                                           
+                   Candidatus Nitrosocosmicus arcticus
+  A0A484IAY0_9ARCH                       Alcohol dehydrogenase (Cytochrome c)      PQQb-propellerrpt                adhA                                                                           
+             Candidatus Nitrosocosmicus franklandianus
+  A0A654M2N9_9ARCH                       Alcohol dehydrogenase (Cytochrome c)      PQQb-propellerrpt                adhA                                                                           
+                 Candidatus Nitrosocosmicus oleophilus
+  A0A075I3S4_9ARCH                   Quinoprotein glucose dehydrogenase (Gcd)      PQQb-propellerrpt                 gcd                                                                           
+             uncultured marine thaumarchaeote KM390H07
+  A0A075I3T2_9ARCH                     Alcohol dehydrogenase (Acceptor) (Gcd)      PQQb-propellerrpt                 gcd                                                                           
+             uncultured marine thaumarchaeote KM390H07         accession                                               protein_name functional_description             gene_id                                                                           
+                                              organism
+  –––––––––––––––– –––––––––––––––––––––––––––––––––––––––––––––––––––––––––– –––––––––––––––––––––– ––––––––––––––––––– ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+  A0AAV3SL87_HALDO             PQQ-binding-like beta-propeller repeat protein      PQQb-propellerrpt   GCM10008985_31140                                                                           
+                                Halococcus dombrowskii
+  A0A8T4GX75_9EURY      PQQ-dependent dehydrogenase (Methanol/ethanol family)      PQQb-propellerrpt        J2753_000717                                                                           
+                                Halolamina salifodinae
+  A0A6B9FGC7_9EURY                                              Dehydrogenase      PQQb-propellerrpt         EI982_15415                                                                           
+                                     Haloplanus rallus
+  A0A1H3Y393_9EURY       PQQ-dependent dehydrogenase, methanol/ethanol family      PQQb-propellerrpt   SAMN04488065_1596                                                                           
+                                     Haloplanus vescus
+  A0A151AG42_9EURY                Outer membrane protein assembly factor BamB      PQQb-propellerrpt              bamB_3                                                                           
+                       Halalkalicoccus paucihalophilus
+  A0A345DYI9_9EURY                                              Dehydrogenase      PQQb-propellerrpt         DU500_00400                                                                           
+                                 Haloplanus rubicundus
+  A0A345EH10_9EURY                                              Dehydrogenase      PQQb-propellerrpt         DU484_17360                                                                           
+                                 Haloplanus rubicundus
+  A0A419WHC8_9EURY      PQQ-dependent dehydrogenase (Methanol/ethanol family)      PQQb-propellerrpt          ATJ93_1680                                                                           
+                                  Halopiger aswanensis
+  A0A3M0CUB0_9EURY                                              Dehydrogenase      PQQb-propellerrpt          ATH50_3150                                                                           
+                                  Haloplanus aerogenes
+  A0A8J8Q7K0_9EURY                                              Dehydrogenase      PQQb-propellerrpt         CV102_00725                                                                           
+                                Natronococcus pandeyae
+  A0A1I0NPW1_9EURY       PQQ-dependent dehydrogenase, methanol/ethanol family      PQQb-propellerrpt   SAMN05216285_1977                                                                           
+                                 Natrinema salifodinae
+  A0A9Q4L0R1_9EURY             PQQ-binding-like beta-propeller repeat protein      PQQb-propellerrpt         NDI89_06195                                                                           
+                              Natrinema salsiterrestre
+      F8D7P0_HALXS                           Alcohol dehydrogenase (Acceptor)      PQQb-propellerrpt                 N/A                                                                      Halopiger xanaduensis (strain DSM 18323 / JCM 14033 / SH-6)
+      M0AP33_NATA1                                      Alcohol dehydrogenase      PQQb-propellerrpt          C481_13789                              Natrialba asiatica (strain ATCC 700177 / DSM 12278 / JCM 9576 / FERM P-10747 / NBRC 102637 / 172P1)
+  A0A1I0QSI6_9EURY       PQQ-dependent dehydrogenase, methanol/ethanol family      PQQb-propellerrpt   SAMN05216285_3865                                                                           
+                                 Natrinema salifodinae
+      L9Y9N1_9EURY                                      Alcohol dehydrogenase      PQQb-propellerrpt          C489_02431                                                                           
+                        Natrinema versiforme JCM 10478
+      L9X3L8_9EURY                          PQQ-dependent enzyme-like protein      PQQb-propellerrpt          C491_15712                                                                           
+                  Natronococcus amylolyticus DSM 10524
+      L0JN62_NATP1                                      Glucose dehydrogenase      PQQb-propellerrpt          C488_08647                                              Natrinema pellirubrum (strain DSM 15624 / CIP 106293 / JCM 10476 / NCIMB 786 / 157)
+      M0A3L9_9EURY                          PQQ-dependent enzyme-like protein      PQQb-propellerrpt          C484_09159                                                                           
+                       Natrialba taiwanensis DSM 12281
+  A0A8T8E3S0_9EURY             PQQ-binding-like beta-propeller repeat protein      PQQb-propellerrpt         JMJ58_05725                                                                           
+                             Haloterrigena salifodinae
+  A0A7D6CN67_9EURY             PQQ-binding-like beta-propeller repeat protein      PQQb-propellerrpt         HYG81_16475                                                                           
+                                      Natrinema zhouii
+  A0AAF0T724_9EURY             PQQ-binding-like beta-propeller repeat protein      PQQb-propellerrpt         NP511_05380                                                                           
+                              Natrinema thermotolerans
+      M0BEB7_9EURY                                      Alcohol dehydrogenase      PQQb-propellerrpt          C480_03959                                                                           
+                          Natrialba aegyptia DSM 13077
+  A0A1H8TIB8_9EURY       PQQ-dependent dehydrogenase, methanol/ethanol family      PQQb-propellerrpt  SAMN04487948_10790                                                                           
+                               Halogranum amylolyticum
+  A0A4P8WJR9_9EURY                                              Dehydrogenase      PQQb-propellerrpt         FEJ81_13575                                                                           
+                                  Natrinema versiforme
+      L0JXR7_9EURY                                      Glucose dehydrogenase      PQQb-propellerrpt          Natoc_1762                                                                           
+                            Natronococcus occultus SP4
+  A0A8J8KEP7_9EURY             PQQ-binding-like beta-propeller repeat protein      PQQb-propellerrpt         HT576_07200                                                                           
+                          Haloterrigena gelatinilytica
+      L9X994_9EURY                          PQQ-dependent enzyme-like protein      PQQb-propellerrpt          C492_13743                                                                           
+                      Natronococcus jeotgali DSM 18795
+      D2RWI1_HALTV                          PQQ-dependent enzyme-like protein      PQQb-propellerrpt                 N/A                               Haloterrigena turkmenica (strain ATCC 51198 / DSM 5511 / JCM 9101 / NCIMB 13204 / VKM B-1734 / 4k)
+      M0C030_9EURY                          PQQ-dependent enzyme-like protein      PQQb-propellerrpt          C477_18975                                                                           
+                        Haloterrigena salina JCM 13891
+  A0A1N7D934_9EURY       PQQ-dependent dehydrogenase, methanol/ethanol family      PQQb-propellerrpt  SAMN05421752_10282                                                                           
+                             Natronorubrum thiooxidans
+      M0NQ12_9EURY                          PQQ-dependent enzyme-like protein      PQQb-propellerrpt          C469_09521                                                                           
+                      Halorubrum lipolyticum DSM 21995
+  A0A8U0I055_9EURY             PQQ-binding-like beta-propeller repeat protein      PQQb-propellerrpt         M0R89_09060                                                                           
+                                       Halorussus limi
+  A0A151AEV7_9EURY                Outer membrane protein assembly factor BamB      PQQb-propellerrpt              bamB_2                                                                           
+                       Halalkalicoccus paucihalophilus
+  A0A8U0IDH4_9EURY             PQQ-binding-like beta-propeller repeat protein      PQQb-propellerrpt         M0R88_09460                                                                           
+                            Halorussus gelatinilyticus
+      D8J9D2_HALJB                          PQQ-dependent enzyme-like protein      PQQb-propellerrpt          C497_03132                                             Halalkalicoccus jeotgali (strain DSM 18796 / CECT 7217 / JCM 14584 / KCTC 4019 / B3)
+  A0AAV3SK76_HALDO             PQQ-binding-like beta-propeller repeat protein      PQQb-propellerrpt   GCM10008985_31200                                                                           
+                                Halococcus dombrowskii
+  A0A8T4H057_9EURY      PQQ-dependent dehydrogenase (Methanol/ethanol family)      PQQb-propellerrpt        J2753_001662                                                                           
+                                Halolamina salifodinae
+  A0A8U0HX89_9EURY             PQQ-binding-like beta-propeller repeat protein      PQQb-propellerrpt         M0R89_05585                                                                           
+                                       Halorussus limi
+      L9ZXD8_9EURY                          PQQ-dependent enzyme-like protein      PQQb-propellerrpt          C484_12116                                                                           
+                       Natrialba taiwanensis DSM 12281
+      M0AYN8_9EURY                          PQQ-dependent enzyme-like protein      PQQb-propellerrpt          C480_15650                                                                           
+                          Natrialba aegyptia DSM 13077
+  A0A7D5KHY7_9EURY             PQQ-binding-like beta-propeller repeat protein      PQQb-propellerrpt         HYG82_03535                                                                           
+                                  Natrinema halophilum
+  A0A2A5QTY5_9EURY                                              Dehydrogenase      PQQb-propellerrpt         CP557_06545                                                                           
+                                  Natrinema ejinorense
+  A0A4P8WGZ8_9EURY                                              Dehydrogenase      PQQb-propellerrpt         FEJ81_07890                                                                           
+                                  Natrinema versiforme
+      M0AUK6_NATA1                          PQQ-dependent enzyme-like protein      PQQb-propellerrpt          C481_09038                              Natrialba asiatica (strain ATCC 700177 / DSM 12278 / JCM 9576 / FERM P-10747 / NBRC 102637 / 172P1)
+      M0AMH9_9EURY                          PQQ-dependent enzyme-like protein      PQQb-propellerrpt          C482_11650                                                                           
+                    Natrialba chahannaoensis JCM 10990
+      D3SZJ3_NATMM                                         PQQ repeat protein      PQQb-propellerrpt          C500_16250 Natrialba magadii (strain ATCC 43099 / DSM 3394 / CCM 3739 / CIP 104546 / IAM 13178 / JCM 8861 / NBRC 102185 / NCIMB 2190 / MS3)
+  A0A8T4H3P0_9EURY      PQQ-dependent dehydrogenase (Methanol/ethanol family)              PGF_CTERM        J2753_002757                                                                           
+                                Halolamina salifodinae
+  A0A8T4GUC7_9EURY                       Alcohol dehydrogenase (Cytochrome c)      PQQb-propellerrpt        J2753_000980                                                                           
+                                Halolamina salifodinae
+  A0A7D6GRG7_9EURY             PQQ-binding-like beta-propeller repeat protein      PQQb-propellerrpt         HYG81_02700                                                                           
+                                      Natrinema zhouii
+      L0JLH8_NATP1                                      Glucose dehydrogenase      PQQb-propellerrpt          C488_00307                                              Natrinema pellirubrum (strain DSM 15624 / CIP 106293 / JCM 10476 / NCIMB 786 / 157)
+  A0AAF0T0V7_9EURY             PQQ-binding-like beta-propeller repeat protein      PQQb-propellerrpt         NP511_18125                                                                           
+                              Natrinema thermotolerans
+  A0A8U0HRX7_9EURY             PQQ-binding-like beta-propeller repeat protein             Cupredoxin         M0R89_13900                                                                           
+                                       Halorussus limi
+  A0A8U0IFC1_9EURY             PQQ-binding-like beta-propeller repeat protein             Cupredoxin         M0R88_14270                                                                           
+                            Halorussus gelatinilyticus
+  A0A8T4GZ72_9EURY                                      Glucose dehydrogenase      PQQb-propellerrpt        J2753_001169                                                                           
+                                Halolamina salifodinae
+  A0A2A5QQF9_9EURY Pyrrolo-quinoline quinone repeat domain-containing protein      PQQb-propellerrpt         CP557_21355                                                                           
+                                  Natrinema ejinorense
+  A0A8T4GY87_9EURY                       Alcohol dehydrogenase (Cytochrome c)      PQQb-propellerrpt        J2753_000788                                                                           
+                                Halolamina salifodinae
+  A0A1G8YT90_9EURY                                      Glucose dehydrogenase             Cupredoxin SAMN04488571_103194                                                                           
+                           Methanoculleus thermophilus
+  A0A8T7H6S7_9EURY             PQQ-binding-like beta-propeller repeat protein      PQQb-propellerrpt         HQQ74_06125                                                                           
+                             Methanoculleus bourgensis
+      I7L104_METBM                         Quinoprotein ethanol dehydrogenase             Cupredoxin                exaA                                                          Methanoculleus bourgensis (strain ATCC 43281 / DSM 3045 / OCM 15 / MS2)
+      G7WQ48_METH6                                       Cytochrome c class I              DOH_DOMON                 N/A                                                                           
+                Methanothrix harundinacea (strain 6Ac)
+      E6N4I3_CALS0                         Quinoprotein alcohol dehydrogenase      PQQb-propellerrpt          CSUB_C0200                                                                           
+                            Caldiarchaeum subterraneum
+  A0A498GY89_9EURY                                    Uncharacterized protein             Cupredoxin         ABH15_13065                                                                           
+                            Methanoculleus taiwanensis
+  A0A8T7HCR3_9EURY             PQQ-binding-like beta-propeller repeat protein      PQQb-propellerrpt         HQQ74_10705                                                                           
+                             Methanoculleus bourgensis
+  A0A075HY68_9ARCH                                PQQ-dependent dehydrogenase      PQQb-propellerrpt                 N/A                                                                           
+             uncultured marine thaumarchaeote KM390H07
+      E6N4G7_CALS0                         Quinoprotein alcohol dehydrogenase      PQQb-propellerrpt          CSUB_C0216                                                                           
+                            Caldiarchaeum subterraneum
+  A0A2V2N6L9_9EURY Pyrrolo-quinoline quinone repeat domain-containing protein      PQQb-propellerrpt         DK846_03695                                                                           
+                              Methanospirillum lacunae
+  A0A075HW84_9ARCH                                  Pyrrolo-quinoline quinone      PQQb-propellerrpt                 N/A                                                                           
+             uncultured marine thaumarchaeote KM390H07
+  A0A557SUE5_9ARCH     WD40/PQQ-like beta propeller repeat containing protein      PQQb-propellerrpt          NARC_90133                                                                           
+                   Candidatus Nitrosocosmicus arcticus
+  A0A484IAY0_9ARCH                       Alcohol dehydrogenase (Cytochrome c)      PQQb-propellerrpt                adhA                                                                           
+             Candidatus Nitrosocosmicus franklandianus
+  A0A654M2N9_9ARCH                       Alcohol dehydrogenase (Cytochrome c)      PQQb-propellerrpt                adhA                                                                           
+                 Candidatus Nitrosocosmicus oleophilus
+  A0A075I3S4_9ARCH                   Quinoprotein glucose dehydrogenase (Gcd)      PQQb-propellerrpt                 gcd                                                                           
+             uncultured marine thaumarchaeote KM390H07
+  A0A075I3T2_9ARCH                     Alcohol dehydrogenase (Acceptor) (Gcd)      PQQb-propellerrpt                 gcd                                                                           
+             uncultured marine thaumarchaeote KM390H07
+
+```
+         accession                                               protein_name functional_description             gene_id                                                                           
+                                              organism
+  –––––––––––––––– –––––––––––––––––––––––––––––––––––––––––––––––––––––––––– –––––––––––––––––––––– ––––––––––––––––––– ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+  A0AAV3SL87_HALDO             PQQ-binding-like beta-propeller repeat protein      PQQb-propellerrpt   GCM10008985_31140                                                                           
+                                Halococcus dombrowskii
+  A0A8T4GX75_9EURY      PQQ-dependent dehydrogenase (Methanol/ethanol family)      PQQb-propellerrpt        J2753_000717                                                                           
+                                Halolamina salifodinae
+  A0A6B9FGC7_9EURY                                              Dehydrogenase      PQQb-propellerrpt         EI982_15415                                                                           
+                                     Haloplanus rallus
+  A0A1H3Y393_9EURY       PQQ-dependent dehydrogenase, methanol/ethanol family      PQQb-propellerrpt   SAMN04488065_1596                                                                           
+                                     Haloplanus vescus
+  A0A151AG42_9EURY                Outer membrane protein assembly factor BamB      PQQb-propellerrpt              bamB_3                                                                           
+                       Halalkalicoccus paucihalophilus
+  A0A345DYI9_9EURY                                              Dehydrogenase      PQQb-propellerrpt         DU500_00400                                                                           
+                                 Haloplanus rubicundus
+  A0A345EH10_9EURY                                              Dehydrogenase      PQQb-propellerrpt         DU484_17360                                                                           
+                                 Haloplanus rubicundus
+  A0A419WHC8_9EURY      PQQ-dependent dehydrogenase (Methanol/ethanol family)      PQQb-propellerrpt          ATJ93_1680                                                                           
+                                  Halopiger aswanensis
+  A0A3M0CUB0_9EURY                                              Dehydrogenase      PQQb-propellerrpt          ATH50_3150                                                                           
+                                  Haloplanus aerogenes
+  A0A8J8Q7K0_9EURY                                              Dehydrogenase      PQQb-propellerrpt         CV102_00725                                                                           
+                                Natronococcus pandeyae
+  A0A1I0NPW1_9EURY       PQQ-dependent dehydrogenase, methanol/ethanol family      PQQb-propellerrpt   SAMN05216285_1977                                                                           
+                                 Natrinema salifodinae
+  A0A9Q4L0R1_9EURY             PQQ-binding-like beta-propeller repeat protein      PQQb-propellerrpt         NDI89_06195                                                                           
+                              Natrinema salsiterrestre
+      F8D7P0_HALXS                           Alcohol dehydrogenase (Acceptor)      PQQb-propellerrpt                 N/A                                                                      Halopiger xanaduensis (strain DSM 18323 / JCM 14033 / SH-6)
+      M0AP33_NATA1                                      Alcohol dehydrogenase      PQQb-propellerrpt          C481_13789                              Natrialba asiatica (strain ATCC 700177 / DSM 12278 / JCM 9576 / FERM P-10747 / NBRC 102637 / 172P1)
+  A0A1I0QSI6_9EURY       PQQ-dependent dehydrogenase, methanol/ethanol family      PQQb-propellerrpt   SAMN05216285_3865                                                                           
+                                 Natrinema salifodinae
+      L9Y9N1_9EURY                                      Alcohol dehydrogenase      PQQb-propellerrpt          C489_02431                                                                           
+                        Natrinema versiforme JCM 10478
+      L9X3L8_9EURY                          PQQ-dependent enzyme-like protein      PQQb-propellerrpt          C491_15712                                                                           
+                  Natronococcus amylolyticus DSM 10524
+      L0JN62_NATP1                                      Glucose dehydrogenase      PQQb-propellerrpt          C488_08647                                              Natrinema pellirubrum (strain DSM 15624 / CIP 106293 / JCM 10476 / NCIMB 786 / 157)
+      M0A3L9_9EURY                          PQQ-dependent enzyme-like protein      PQQb-propellerrpt          C484_09159                                                                           
+                       Natrialba taiwanensis DSM 12281
+  A0A8T8E3S0_9EURY             PQQ-binding-like beta-propeller repeat protein      PQQb-propellerrpt         JMJ58_05725                                                                           
+                             Haloterrigena salifodinae
+  A0A7D6CN67_9EURY             PQQ-binding-like beta-propeller repeat protein      PQQb-propellerrpt         HYG81_16475                                                                           
+                                      Natrinema zhouii
+  A0AAF0T724_9EURY             PQQ-binding-like beta-propeller repeat protein      PQQb-propellerrpt         NP511_05380                                                                           
+                              Natrinema thermotolerans
+      M0BEB7_9EURY                                      Alcohol dehydrogenase      PQQb-propellerrpt          C480_03959                                                                           
+                          Natrialba aegyptia DSM 13077
+  A0A1H8TIB8_9EURY       PQQ-dependent dehydrogenase, methanol/ethanol family      PQQb-propellerrpt  SAMN04487948_10790                                                                           
+                               Halogranum amylolyticum
+  A0A4P8WJR9_9EURY                                              Dehydrogenase      PQQb-propellerrpt         FEJ81_13575                                                                           
+                                  Natrinema versiforme
+      L0JXR7_9EURY                                      Glucose dehydrogenase      PQQb-propellerrpt          Natoc_1762                                                                           
+                            Natronococcus occultus SP4
+  A0A8J8KEP7_9EURY             PQQ-binding-like beta-propeller repeat protein      PQQb-propellerrpt         HT576_07200                                                                           
+                          Haloterrigena gelatinilytica
+      L9X994_9EURY                          PQQ-dependent enzyme-like protein      PQQb-propellerrpt          C492_13743                                                                           
+                      Natronococcus jeotgali DSM 18795
+      D2RWI1_HALTV                          PQQ-dependent enzyme-like protein      PQQb-propellerrpt                 N/A                               Haloterrigena turkmenica (strain ATCC 51198 / DSM 5511 / JCM 9101 / NCIMB 13204 / VKM B-1734 / 4k)
+      M0C030_9EURY                          PQQ-dependent enzyme-like protein      PQQb-propellerrpt          C477_18975                                                                           
+                        Haloterrigena salina JCM 13891
+  A0A1N7D934_9EURY       PQQ-dependent dehydrogenase, methanol/ethanol family      PQQb-propellerrpt  SAMN05421752_10282                                                                           
+                             Natronorubrum thiooxidans
+      M0NQ12_9EURY                          PQQ-dependent enzyme-like protein      PQQb-propellerrpt          C469_09521                                                                           
+                      Halorubrum lipolyticum DSM 21995
+  A0A8U0I055_9EURY             PQQ-binding-like beta-propeller repeat protein      PQQb-propellerrpt         M0R89_09060                                                                           
+                                       Halorussus limi
+  A0A151AEV7_9EURY                Outer membrane protein assembly factor BamB      PQQb-propellerrpt              bamB_2                                                                           
+                       Halalkalicoccus paucihalophilus
+  A0A8U0IDH4_9EURY             PQQ-binding-like beta-propeller repeat protein      PQQb-propellerrpt         M0R88_09460                                                                           
+                            Halorussus gelatinilyticus
+      D8J9D2_HALJB                          PQQ-dependent enzyme-like protein      PQQb-propellerrpt          C497_03132                                             Halalkalicoccus jeotgali (strain DSM 18796 / CECT 7217 / JCM 14584 / KCTC 4019 / B3)
+  A0AAV3SK76_HALDO             PQQ-binding-like beta-propeller repeat protein      PQQb-propellerrpt   GCM10008985_31200                                                                           
+                                Halococcus dombrowskii
+  A0A8T4H057_9EURY      PQQ-dependent dehydrogenase (Methanol/ethanol family)      PQQb-propellerrpt        J2753_001662                                                                           
+                                Halolamina salifodinae
+  A0A8U0HX89_9EURY             PQQ-binding-like beta-propeller repeat protein      PQQb-propellerrpt         M0R89_05585                                                                           
+                                       Halorussus limi
+      L9ZXD8_9EURY                          PQQ-dependent enzyme-like protein      PQQb-propellerrpt          C484_12116                                                                           
+                       Natrialba taiwanensis DSM 12281
+      M0AYN8_9EURY                          PQQ-dependent enzyme-like protein      PQQb-propellerrpt          C480_15650                                                                           
+                          Natrialba aegyptia DSM 13077
+  A0A7D5KHY7_9EURY             PQQ-binding-like beta-propeller repeat protein      PQQb-propellerrpt         HYG82_03535                                                                           
+                                  Natrinema halophilum
+  A0A2A5QTY5_9EURY                                              Dehydrogenase      PQQb-propellerrpt         CP557_06545                                                                           
+                                  Natrinema ejinorense
+  A0A4P8WGZ8_9EURY                                              Dehydrogenase      PQQb-propellerrpt         FEJ81_07890                                                                           
+                                  Natrinema versiforme
+      M0AUK6_NATA1                          PQQ-dependent enzyme-like protein      PQQb-propellerrpt          C481_09038                              Natrialba asiatica (strain ATCC 700177 / DSM 12278 / JCM 9576 / FERM P-10747 / NBRC 102637 / 172P1)
+      M0AMH9_9EURY                          PQQ-dependent enzyme-like protein      PQQb-propellerrpt          C482_11650                                                                           
+                    Natrialba chahannaoensis JCM 10990
+      D3SZJ3_NATMM                                         PQQ repeat protein      PQQb-propellerrpt          C500_16250 Natrialba magadii (strain ATCC 43099 / DSM 3394 / CCM 3739 / CIP 104546 / IAM 13178 / JCM 8861 / NBRC 102185 / NCIMB 2190 / MS3)
+  A0A8T4H3P0_9EURY      PQQ-dependent dehydrogenase (Methanol/ethanol family)              PGF_CTERM        J2753_002757                                                                           
+                                Halolamina salifodinae
+  A0A8T4GUC7_9EURY                       Alcohol dehydrogenase (Cytochrome c)      PQQb-propellerrpt        J2753_000980                                                                           
+                                Halolamina salifodinae
+  A0A7D6GRG7_9EURY             PQQ-binding-like beta-propeller repeat protein      PQQb-propellerrpt         HYG81_02700                                                                           
+                                      Natrinema zhouii
+      L0JLH8_NATP1                                      Glucose dehydrogenase      PQQb-propellerrpt          C488_00307                                              Natrinema pellirubrum (strain DSM 15624 / CIP 106293 / JCM 10476 / NCIMB 786 / 157)
+  A0AAF0T0V7_9EURY             PQQ-binding-like beta-propeller repeat protein      PQQb-propellerrpt         NP511_18125                                                                           
+                              Natrinema thermotolerans
+  A0A8U0HRX7_9EURY             PQQ-binding-like beta-propeller repeat protein             Cupredoxin         M0R89_13900                                                                           
+                                       Halorussus limi
+  A0A8U0IFC1_9EURY             PQQ-binding-like beta-propeller repeat protein             Cupredoxin         M0R88_14270                                                                           
+                            Halorussus gelatinilyticus
+  A0A8T4GZ72_9EURY                                      Glucose dehydrogenase      PQQb-propellerrpt        J2753_001169                                                                           
+                                Halolamina salifodinae
+  A0A2A5QQF9_9EURY Pyrrolo-quinoline quinone repeat domain-containing protein      PQQb-propellerrpt         CP557_21355                                                                           
+                                  Natrinema ejinorense
+  A0A8T4GY87_9EURY                       Alcohol dehydrogenase (Cytochrome c)      PQQb-propellerrpt        J2753_000788                                                                           
+                                Halolamina salifodinae
+  A0A1G8YT90_9EURY                                      Glucose dehydrogenase             Cupredoxin SAMN04488571_103194                                                                           
+                           Methanoculleus thermophilus
+  A0A8T7H6S7_9EURY             PQQ-binding-like beta-propeller repeat protein      PQQb-propellerrpt         HQQ74_06125                                                                           
+                             Methanoculleus bourgensis
+      I7L104_METBM                         Quinoprotein ethanol dehydrogenase             Cupredoxin                exaA                                                          Methanoculleus bourgensis (strain ATCC 43281 / DSM 3045 / OCM 15 / MS2)
+      G7WQ48_METH6                                       Cytochrome c class I              DOH_DOMON                 N/A                                                                           
+                Methanothrix harundinacea (strain 6Ac)
+      E6N4I3_CALS0                         Quinoprotein alcohol dehydrogenase      PQQb-propellerrpt          CSUB_C0200                                                                           
+                            Caldiarchaeum subterraneum
+  A0A498GY89_9EURY                                    Uncharacterized protein             Cupredoxin         ABH15_13065                                                                           
+                            Methanoculleus taiwanensis
+  A0A8T7HCR3_9EURY             PQQ-binding-like beta-propeller repeat protein      PQQb-propellerrpt         HQQ74_10705                                                                           
+                             Methanoculleus bourgensis
+  A0A075HY68_9ARCH                                PQQ-dependent dehydrogenase      PQQb-propellerrpt                 N/A                                                                           
+             uncultured marine thaumarchaeote KM390H07
+      E6N4G7_CALS0                         Quinoprotein alcohol dehydrogenase      PQQb-propellerrpt          CSUB_C0216                                                                           
+                            Caldiarchaeum subterraneum
+  A0A2V2N6L9_9EURY Pyrrolo-quinoline quinone repeat domain-containing protein      PQQb-propellerrpt         DK846_03695                                                                           
+                              Methanospirillum lacunae
+  A0A075HW84_9ARCH                                  Pyrrolo-quinoline quinone      PQQb-propellerrpt                 N/A                                                                           
+             uncultured marine thaumarchaeote KM390H07
+  A0A557SUE5_9ARCH     WD40/PQQ-like beta propeller repeat containing protein      PQQb-propellerrpt          NARC_90133                                                                           
+                   Candidatus Nitrosocosmicus arcticus
+  A0A484IAY0_9ARCH                       Alcohol dehydrogenase (Cytochrome c)      PQQb-propellerrpt                adhA                                                                           
+             Candidatus Nitrosocosmicus franklandianus
+  A0A654M2N9_9ARCH                       Alcohol dehydrogenase (Cytochrome c)      PQQb-propellerrpt                adhA                                                                           
+                 Candidatus Nitrosocosmicus oleophilus
+  A0A075I3S4_9ARCH                   Quinoprotein glucose dehydrogenase (Gcd)      PQQb-propellerrpt                 gcd                                                                           
+             uncultured marine thaumarchaeote KM390H07
+  A0A075I3T2_9ARCH                     Alcohol dehydrogenase (Acceptor) (Gcd)      PQQb-propellerrpt                 gcd                                                                           
+             uncultured marine thaumarchaeote KM390H07
+```
+
+
+
+

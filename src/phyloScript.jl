@@ -127,3 +127,50 @@ println("✅ iTOL Function file generated at D:/hmmerStuff/out/itol_motifs.txt")
 
 ln_users = filter(row -> row.classification == "Calcium", df_known)
 
+
+
+
+
+# ------
+
+
+function generate_itol_kingdom_strip_foldmason(df, out_path)
+    # Professional color palette for Kingdoms
+    colors = Dict(
+        "Bacteria"  => "#3498db", # Bright Blue
+        "Archaea"   => "#e74c3c", # Vibrant Red
+        "Eukaryota" => "#2ecc71", # Nature Green
+        "Viruses"   => "#9b59b6"  # Purple
+    )
+
+    open(out_path, "w") do io
+        println(io, "DATASET_COLORSTRIP")
+        println(io, "SEPARATOR TAB")
+        println(io, "DATASET_LABEL\tKingdom_FoldMason")
+        println(io, "COLOR\t#000000") # Legend color
+        println(io, "DATA")
+        
+        for row in eachrow(df)
+            # CRITICAL FIX: Match the FoldMason tree leaf format
+            # Tree leaf = Accession + "pdb" (e.g., "A0A010T661pdb")
+            if ismissing(row.accession) continue end
+            tree_id = "$(row.accession)pdb"
+            
+            # Get Kingdom
+            kingdom = ismissing(row.kingdom) ? "Unknown" : row.kingdom
+            
+            # Map Color
+            color = get(colors, kingdom, "#808080")
+            
+            # Write: ID <tab> Color <tab> Label
+            println(io, "$tree_id\t$color\t$kingdom")
+        end
+    end
+    println("✅ Kingdom strip generated: $out_path")
+end
+
+generate_itol_kingdom_strip_foldmason(
+    final_df,
+    joinpath(paths.itol_dir, "itol_kingdoms_foldmason.txt")
+)
+
